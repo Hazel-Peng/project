@@ -63,7 +63,7 @@ String getnumber=(String)session.getAttribute("number");
 <%if(session.getAttribute("ID")==null){ 
 %><script>alert('請登入帳號密碼');window.location.href='Login.html'</script><%} %>
 <h2><%=getrestname%>訂位資料</h2>
-    <form method="post" action="http://localhost:8080/Project/doReOrder">
+    <form method="post" action="doReOrder">
     <div>
         <p>
   會員帳號: <input type="text" name="id" size="15" value="<%=getid%>" disabled="disabled"><p>

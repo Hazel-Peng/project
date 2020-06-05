@@ -11,17 +11,18 @@
 		#frist1{
 			width:30%;
 			margin: auto;
+			border-style:double hidden;
+			border-width: 3px;
+			border-color: orange;
 		}
 
-    	div {		
-		border-style:double hidden;
-		border-width: 3px;
-		border-color: orange;
-		
-    	}
+    	
+    	
+    	#content{
+    	margin-left:20%;}
 			
     </style>
-<body id="frist1">
+<body >
 <%
 String ID =(String)session.getAttribute("ID");
 session.setAttribute("ID",ID);
@@ -30,8 +31,9 @@ session.setAttribute("ID",ID);
 %>
 <%if(session.getAttribute("ID")==null){ 
 %><script>alert('請登入帳號密碼');window.location.href='Login.html'</script><%} %>
+<div id="frist1">
 <h2>訂位資料管理</h2>
-  <form name="cform"method="post" action="http://localhost:8080/Project/OrderControl">  
+  <form  name="cform" method="post" action="OrderControl">  
     <div>
      <p><ul>
         <li>會員帳號:<input type="text" id="id" size="20" value="<%=ID %>" disabled="disabled"><p>
@@ -43,6 +45,8 @@ session.setAttribute("ID",ID);
         <input type="button" id="btn" name="back" value="回首頁" onclick="javascript:location.href='onepage.jsp'" >
         <!--  <a href="http://localhost:8080/Project/CallOrder2" target="_blank">訂位編號查詢</a>-->
     </div>
+   </div>
+    
   </form>
   <div id="content"></div>
   
