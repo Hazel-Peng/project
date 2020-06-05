@@ -49,7 +49,7 @@ session.setAttribute("ID",ID);
   <script>
   function getDate(){
 	  var req=new XMLHttpRequest();
-	  req.open("get","http://localhost:8080/Project/CallOrder2");
+	  req.open("get","CallOrder2");
 	  req.onload=function(){
 		  var content=document.getElementById("content");
 		  content.innerHTML=this.responseText;
